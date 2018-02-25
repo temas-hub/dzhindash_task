@@ -63,7 +63,7 @@ typealias Rule = (Solution) -> Boolean
 val ruleList = listOf<Rule>(
         { s -> s.indOf(Names.Markolla) == s.indOf(Color.P) },
         { s -> s.indOf(Color.W) == s.indOf(2)},
-        { s -> s.pos[s.indOf(Color.B)] < s.pos[s.indOf(Color.R)]},
+        { s -> s.pos[s.indOf(Color.B)] == s.pos[s.indOf(Color.R)] + 1},
         { s -> s.indOf(Color.B) == s.indOf(Drink.Absynth)},
         { s -> s.indOf(City.F) == s.indOf(Color.G)},
         { s -> s.isNear(s.indOf(Jew.Persten), s.indOf(City.F))},
